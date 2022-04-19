@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/API-Gateway/API-Gateway.iml" filepath="$PROJECT_DIR$/API-Gateway/API-Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Department-Service/Department-Service.iml" filepath="$PROJECT_DIR$/Department-Service/Department-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Service-registry/Service-registry.iml" filepath="$PROJECT_DIR$/Service-registry/Service-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-Cloud-Config/Spring-Cloud-Config.iml" filepath="$PROJECT_DIR$/Spring-Cloud-Config/Spring-Cloud-Config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User-Service/User-Service.iml" filepath="$PROJECT_DIR$/User-Service/User-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring_boot_microsrvices.iml" filepath="$PROJECT_DIR$/.idea/spring_boot_microsrvices.iml" />
+    </modules>
+  </component>
+</project>

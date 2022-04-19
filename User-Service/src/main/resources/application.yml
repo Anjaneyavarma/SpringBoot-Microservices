@@ -1,0 +1,31 @@
+server:
+  port: 9002
+
+---
+spring:
+  profiles:
+    active: dev
+  application:
+    name: STUDENT-SERVICE
+
+---
+spring:
+  profiles: dev
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost/User_DB
+    password: Varma@av05
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+---
+spring:
+  cloud:
+    config:
+      import-check:
+        enabled: false

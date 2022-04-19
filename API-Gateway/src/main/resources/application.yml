@@ -1,0 +1,24 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICE
+          uri: lb://STUDENT-SERVICE
+          predicates:
+            - Path=/v1/api/**
+        - id: DEPARTMENT-SERVICE
+          uri: lb://DEPARTMENT-SERVICE
+          predicates:
+            - Path=/v1/api/**
+
+---
+spring:
+  cloud:
+    config:
+      import-check:
+        enabled: false
