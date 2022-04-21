@@ -14,7 +14,7 @@ spring:
   datasource:
     username: root
     url: jdbc:mysql://localhost/Department_DB
-    password: Varma@av05
+    password: ***
   jpa:
     properties:
       hibernate:
