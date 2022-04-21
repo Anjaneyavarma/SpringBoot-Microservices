@@ -12,4 +12,6 @@ public interface StudentService {
     List<Student> getStudents();
 
     ResponseTemplateVO getStudentWithDepartment(Long id);
+
+    String saveStudentWithDepartment(ResponseTemplateVO responseTemplateVO);
 }

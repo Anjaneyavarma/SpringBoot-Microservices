@@ -27,4 +27,10 @@ public class StudentController {
     public ResponseTemplateVO getStudentWithDepartment(@PathVariable("id") Long id){
         return studentService.getStudentWithDepartment(id);
     }
+
+    @PostMapping("/save/student/department")
+    public String saveStudentWithDepartment(@RequestBody ResponseTemplateVO responseTemplateVO){
+        return studentService.saveStudentWithDepartment(responseTemplateVO);
+
+    }
 }

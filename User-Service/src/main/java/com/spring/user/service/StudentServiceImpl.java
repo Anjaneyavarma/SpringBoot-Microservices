@@ -28,13 +28,25 @@ public class StudentServiceImpl implements StudentService {
     public ResponseTemplateVO getStudentWithDepartment(Long id) {
         ResponseTemplateVO responseTemplateVO = new ResponseTemplateVO();
         Student student = studentRepository.findByStudentId(id);
-        Department department = restTemplate.getForObject("http://DEARTMENT-SERVICE/v1/api/department/"+ student.getDepartmentId()
+        Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/v1/api/department/"+ student.getDepartmentId()
                 , Department.class);
 
         responseTemplateVO.setDepartment(department);
         responseTemplateVO.setStudent(student);
 
         return responseTemplateVO;
+    }
+
+    @Override
+    public String saveStudentWithDepartment(ResponseTemplateVO responseTemplateVO) {
+        ResponseTemplateVO vo = responseTemplateVO;
+        studentRepository.save(vo.getStudent());
+        Department department = vo.getDepartment();
+
+        restTemplate.postForObject("http://DEPARTMENT-SERVICE/v1/api/save/department",department,Department.class);
+
+        return "Saved Successfully";
+
     }
 
     @Override
